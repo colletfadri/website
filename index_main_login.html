@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+  	<meta charset="utf-8">
+  	<meta name="viewport" content="initial-scale=1, width=device-width">
+  	
+  	<link rel="stylesheet"  href="styles_main_login.css"/>
+      <link rel="stylesheet"  href="styles.css"/>
+  	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:wght@700&display=swap" />
+  	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" />
+  	
+  	    
+    <!--Favicon (Symbol in Registerkarte)-->
+    <link rel="icon" href="image/Logo_MWGF.png" type="image/png">
+    <link rel="apple-touch-icon" href="image/Logo_MWGF.png">
+
+   <!-------------------------------------------------Navigation------------------------------------------------->
+
+   <nav class="navbar">
+    <!-- Logo -->
+    <div class="logo">
+      <a href="#"><img src="image/Logo_MWGF.png" alt=""></a>
+    </div>
+
+    <!-- Navigation Links -->
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#app">App</a></li>
+      <li><a href="#ueberuns">Über Uns</a></li>
+      <li><a href="#news">News</a></li>
+      <li><a href="#login">Login</a></li>
+    </ul>
+
+    <!-- Button -->
+    <div class="nav-button">
+      <a href="#download" class="btn">App downloaden</a>
+    </div>
+
+    <!-- Burger Menu -->
+    <button class="burger" aria-label="Toggle navigation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Navigation Sidebar -->
+  <aside class="mobile-nav">
+    <button class="close-btn" aria-label="Close navigation">
+      &times; <!-- Cross button -->
+    </button>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#app">App</a></li>
+      <li><a href="#ueberuns">Über Uns</a></li>
+      <li><a href="#news">News</a></li>
+      <li><a href="#login">Login</a></li>
+    </ul>
+
+  </aside>
+
+</head>
+<script src="script.js"></script>
+<body>
+<!-------------------------------------------------Ende Navigation------------------------------------------------->
+
+
+    <div>
+        <div class="login-alles">
+            <b class="login-titel">Login</b>
+            <div class="fliesstext_login">Willkommen zurück! Bitte logge dich ein, um zu deinem Benutzerkonto zu gelangen.</div>
+    
+            <form action="index_main_login_login.html">
+                <label class="e-mail" for="textfeld">E-Mail</label>
+                <input class="login-bloecke" type="email" id="e-mail" name="e-mail" required placeholder="E-Mail">
+                
+                <label class="passwort" for="passwort">Passwort</label>
+                <input class="login-bloecke" type="password" id="password" name="password" required placeholder="Passwort">
+                <div class="remember-me">
+                    <label class="container-remember-me">
+                        <input type="checkbox" checked="checked">
+                        <span class="checkmark"></span>
+                        <a>Remember me</a>
+                    </label>
+                </div>
+                <div class="passwort-vergessen">
+                    <a href="/index_main_login_pwv.html" class="passwort-text">Passwort vergessen?</a>
+                    </div>
+                <button type="submit" class="login_button"><a>Login</a></button>
+            </form>
+            <div class="kein-account-sign-container">
+                <span>Kein Account? <a href="/index_main_login_signup.html" class="link"><span>Sign up</a></span></span>
+            </div>
+            <div class="login-image">
+                <img src="/image/AdobeStock_357137685.jpeg" alt="Login-Bild">
+            </div>
+        </div>
+    </div>
+
+</body>
+<body>
+
+    <footer>
+        <div class="footer">
+            <div class="footer-newsletter-box">
+            <b class="nichts-mehr-verpassen-container">
+            <p class="nichts-mehr-verpassen">Nichts mehr verpassen und <br> Newsletter abbonieren</p>
+            
+            </b>
+            <div class="input-with-button">
+                <input type="email" placeholder="Enter your email" aria-label="Email address">
+                <button type="submit">Subscribe</button>
+              </div>
+            </div>
+            </div>
+            </div>
+
+            <div class="footer-links">
+            <div class="links">
+            <div class="footer-nav-links"><a href="#">App</a></div>
+            <div class="footer-nav-links"><a href="#">Über Uns</a></div>
+            <div class="footer-nav-links"><a href="#">News</a></div>
+            <div class="footer-nav-links"><a href="#">Login</a></div>
+            </div>
+
+            <div class="social-media-icons">
+            <img class="facebook-black-icon" alt="" src="image/facebook-black.svg">
+            <img class="vimeo-black-icon" alt="" src="image/vimeo-black.svg">
+            <img class="twitter-black-icon" alt="" src="image/twitter-black.svg">
+            <img class="youtube-black-icon" alt="" src="image/youtube-black.svg">
+            </div>
+            </div>
+
+            <img class="footer-child" alt="" src="/image/Line 2.svg">
+            <div class="footer-impressum">
+            <div class="rights-reserved">© 2024 AMEI. All rights reserved.</div>
+            <div class="terms-of-service">Impressum Datenschutzerklärung</div>
+            </div>
+            </div>
+            
+    </footer>
+</body>
+</html>

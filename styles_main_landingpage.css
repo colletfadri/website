@@ -1,0 +1,371 @@
+:root {
+    /* Colors */
+    --background-white: #fff;
+    --background-light-gray: #f3f2f0;
+    --text-color: #2f421c;
+    --button-color-hover: #476a21;
+    --button-color: #2f421c;
+    --button-text-color: #f3f2f0;
+
+    /* Fonts */
+    --body-text: Roboto;
+    --titles: Lora;
+
+    /* Font sizes */
+    --Desktop-H1-64: 64px;
+    --Desktop-H2-28: 28px;
+    --Desktop-Body-18: 18px;
+    --Mobile-H1-40: 40px;
+    --Mobile-H2-24: 24px;
+    --Mobile-Body-16: 16px;
+
+    /* Spacing */
+    --spacing-20: 20px;
+    --spacing-40: 40px;
+}
+* {
+    margin: 0;
+    padding: 0;
+    line-height: normal;
+    box-sizing: border-box; /* Hilfreich für einheitliche Layouts */
+}
+body {
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 100vh;
+}
+.header {
+    position: relative;
+  }
+/* Definition Fliesstext */
+.fliesstext {
+    margin: var(--spacing-20);
+    font-family: var(--body-text);
+    font-size: var(--Mobile-Body-16);
+}
+.shadow {
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.40);
+}
+/* Anpassung Schriftgrösse ab 389px Bildschirm */
+    @media (max-width: 389px) {
+        .fliesstext {
+            font-size: var(--Desktop-Body-18);
+        }
+    }
+
+/*--------Homescreen Landingpage-------*/
+.startbild {
+    width: 100vw; /* Vollbildweite */
+    position: relative;
+    overflow: hidden;
+    height: 100vh; /* Vollbildhöhe */
+    object-fit: cover;
+    display: flex;
+}
+.amei {
+    position: relative;
+    display: inline-block;
+    font-size: 100px;
+    text-shadow: 0px 2.5px 2.5px rgba(0, 0, 0, 0.40);
+}
+.slogan {
+    position: relative;
+    font-size: var(--Mobile-H2-24);
+    display: inline-block;
+    text-shadow: 0px 2.5px 2.5px rgba(0, 0, 0, 0.40);
+}
+
+.pfeil {
+    margin-top: 20px;
+}
+.title {
+    margin: var(--spacing-20);
+    position: absolute;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+.homescreen {
+    border-radius: 0px 0px 20px 20px;
+    height: 844px;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/*--------Buttons Landingpage---------*/
+.button-mehr-ueber-uns,
+.button-download-app,
+.button-mehr-infos,
+.button-news {
+    border-radius: 5px;
+    background-color: var(--button-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+}
+.button-download-app {
+    gap: 10px; /* Lückenweite zwischen Wort und Bild im Button */
+}
+.button-common {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    text-align: center;
+}
+.button-common :hover {
+    background-color: var(--button-color-hover);
+}
+.button-text a { /* a eintragen, da sich es sonst nur auf <b> beschränkt */
+    position: relative;
+    color: var(--button-text-color); 
+    text-decoration: none; /* keine Unterstreichung */
+}
+
+/*------Box Ueber uns Langingpage------*/
+.heading {
+    position: relative;
+    display: inline-block;
+    font-size: var(--Mobile-H1-40);
+}
+.heading-h2 {
+    font-size: var(--Mobile-H2-24);
+}
+@media (max-width: 389px) {
+    .heading {
+        font-size: var(--Desktop-H1-64);
+    }
+    .heading-h2 {
+        font-size: var(--Desktop-H2-28);
+    }
+}
+.textbox-ueber-uns {
+    margin: 30px 180px 30px 180px; /*Textbox Seitenabstände, damit Text nicht zu sehr auseinander gezogen wird*/
+}
+@media (max-width: 900px) {
+.textbox-ueber-uns {
+    margin: var(--spacing-20);
+    }
+}
+.box-1-ueber-uns {
+    width: auto;
+    display: flex;
+    border-radius: 20px;
+    background-color: var(--background-light-gray);
+    overflow: hidden;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-40) 0px;
+    margin: var(--spacing-20);
+    margin-top: 40px;
+    box-sizing: border-box; /* nimmt Textbox und Buttonbox zusammen */
+    gap: 10px;
+    color: var(--text-color);
+}
+
+/*------Box Download Landingpage------*/
+.background-image {
+    width: 100%;
+    background-image: url('image/Landingpage/action-shot_2_mobile.png');
+    background-size: cover; /* Bild proportional skalieren */
+    background-position: center;
+    min-height: 700px; /* damit bei mobile-view nicht zu sehr skaliert wird */
+}
+/* Ab einer Breite von 1200px anderes Bild */
+@media (min-width: 1200px) {
+    .background-image {
+        background-image: url('image/Landingpage/action-shot_3.png');
+        height: 65vh;
+    }
+}
+.frame-icon {
+    width: 24px;
+    height: 24px;
+}
+.box-2-download {
+    align-self: stretch;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative;
+    margin: var(--spacing-20);
+    box-sizing: border-box; /* nimmt Textbox und Buttonbox zusammen */
+    gap: 10px;
+    }
+.textbox-download {
+    justify-content: flex-end;
+    margin-top: 100%;
+    margin-bottom: var(--spacing-40);
+}
+/* Ab einer Bildschirmbreite von 1200px */
+@media (min-width: 1200px) {
+    .textbox-download {
+        text-align: center; 
+        margin-top: 13%;
+        margin-left: 250px; /* Abstand vom linken Rand */
+        max-width: 450px; /* definiert max. Breite von Textblock */
+    }
+    .ueberschrift-download {
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.40);
+    }
+    
+}
+.ueberschrift-download {
+    position: relative;
+    margin: var(--spacing-20);
+    font-size: var(--Desktop-H2-28);
+    text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.55);
+}
+
+/*------Box App Langingpage------*/
+.ueberschrift-app {
+    font-size: var(--Desktop-H2-28);
+    display: inline-block;
+    margin: 0px var(--spacing-20);;
+}
+.fliesstext-app {
+    position: relative;
+    font-size: var(--Desktop-Body-18);
+    font-family: var(--body-text);
+    display: inline-block;
+}
+.box-3-app {
+    align-self: stretch;
+    width: auto;
+    border-radius: 20px;
+    background-color: var(--background-light-gray);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: var(--spacing-40) 0px;
+    box-sizing: border-box;
+    gap: 10px;
+    margin: var(--spacing-20);
+    color: var(--text-color);
+}
+.textbox-app {
+   position: relative;
+   display: flex;
+   flex-direction: column; 
+}
+
+/*------Box News Langingpage------*/
+.box-4-news {
+    align-self: stretch;
+    width: auto;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+    margin: var(--spacing-20);
+    box-sizing: border-box; /* nimmt Textbox und Buttonbox zusammen */
+    gap: 10px;
+}
+.background-image2 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url('image/Landingpage/wohnzimmer.jpeg');
+    background-size: cover; /* Bild proportional skalieren */
+    background-position: center;
+    min-height: 700px; /* damit bei mobile-view nicht zu sehr skaliert wird */
+}
+.textbox-news {
+    text-align: center; /* Zentrierter Text */
+    margin-top: 10vh;
+    max-width: 800px;
+}
+.ueberschrift-news {
+    position: relative;
+    margin: var(--spacing-20);
+    font-size: var(--Desktop-H2-28);
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.40);
+}
+
+/*------Box Sponsoren Landingpage------*/
+.box-5-sponsoren {
+    align-self: stretch;
+    display: flex;
+    border-radius: 20px;
+    background-color: var(--background-light-gray);
+    overflow: hidden;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-40) 0px;
+    margin: var(--spacing-20);
+    box-sizing: border-box; /* nimmt Textbox und Buttonbox zusammen */
+    gap: 10px;
+    font-size: var(--Desktop-Body-18);
+    font-family: var(--titles);
+    color: var(--text-color);
+}
+.sponsor-container {
+    display: flex; 
+    flex-wrap: wrap; /* Elemente umbrechen, wenn kein Platz mehr ist */
+    justify-content: space-around; /* Platz zwischen Logos gleichmässig verteilen */
+    align-items: center; 
+    gap: 50px; 
+    padding: var(--spacing-20); 
+  }
+@media (max-width: 500px) {
+    .sponsor-container {
+      flex-direction: column; /* Elemente untereinander anordnen */
+      align-items: center; 
+    }
+}
+  .sponsor-logo {
+    max-width: 100px;
+    min-width: none; 
+    height: auto; 
+  }
+
+/*------Gerüst Landingpage------*/
+.title-background-parent {
+    margin: 0 !important;
+    /*position: absolute;*/
+    align-self: stretch;
+    top: 0px;
+    left: 0px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+}
+.frame-landingpage {
+    width: 100%;
+    position: relative;
+    background-color: var(--background-white);
+    height: auto;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    gap: 10px;
+    text-align: center;
+    color: white;
+    font-family: var(--titles);
+}
